@@ -2,12 +2,16 @@ import React from 'react'
 import './Navbar.css'
 import { FiSearch } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
+import { LuMenu } from "react-icons/lu";
+import { ImYoutube2 } from "react-icons/im";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <div className='navbar-logo'>
-            <h1>YOUTUBE</h1>
+        <div className='navbar-left-side'>
+            <LuMenu size={22} className='navbar-menu-icon' />
+            <ImYoutube2 size={75} className='navbar-logo' />
         </div>
         <div className='navbar-search'>
             <div className='navbar-search-container'>
@@ -15,8 +19,9 @@ const Navbar = () => {
                 <FiSearch />
             </div>
         </div>
-        <div className='navbar-profile'>
-            <CgProfile />
+        <div className='navbar-right-side'>
+            <IoMdNotificationsOutline size={23} className='navbar-notification-icon' />
+            <CgProfile size={20} />
         </div>
     </div>
   )
