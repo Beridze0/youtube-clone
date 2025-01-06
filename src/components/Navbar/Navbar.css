@@ -1,8 +1,12 @@
 .navbar{
-    padding: 0 1.1rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 65px;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-bg);
 }
 
 .navbar-left-side{

@@ -1,9 +1,40 @@
 .sidebar{
-    padding-left: 0.3rem;
+    padding-left: 0.2rem;
     width: fit-content;
     display: flex;
     flex-direction: column;
+    position: sticky;
+    overflow-y: scroll;
+    height: calc(100vh-65px);
+    top: 65px;
+    left: 0;
+    background-color: var(--primary-bg);
 }
+
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+.sidebar:hover::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar:hover::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Style the scrollbar thumb on hover */
+.sidebar:hover::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
 
 .sidebar-menu-item{
     display: flex;
@@ -12,20 +43,24 @@
     justify-content: center;
     padding: 1rem 0.1rem;
     border-radius: 0.8rem;
+    cursor: pointer;
 }
 
-.sidebar-menu-item-expanded{
+.expanded-home-icon{
+    margin-top: 0.35rem;
+}
+
+.sidebar-menu-item-expanded, .sidebar-menu-item-extra{
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    border-radius: 0.5rem;
-    padding: 0.8rem 1.5rem 0.8rem 0.6rem;
-    margin-left: 0.7rem;
-    margin-bottom: 0.3rem;
-    font-size: 2rem;
+    gap: 1rem;
+    border-radius: 0.55rem;
+    padding: 0.65rem 0rem 0.65rem 1.1rem;
+    margin-left: 0.2rem;
+    cursor: pointer;
 }
 
-.sidebar-menu-item-expanded p{
+.sidebar-menu-item-expanded p, .sidebar-menu-item-extra p{
     margin: 0;
     font-size: 0.85rem;
     font-weight: 500;
@@ -36,6 +71,39 @@
     margin: 0.4rem 0;
 }
 
-.sidebar-menu-item:hover, .sidebar-menu-item-expanded:hover{
+.sidebar-menu-item:hover,
+.sidebar-menu-item-expanded:hover,
+.sidebar-menu-item-extra:hover,
+.sidebar-you:hover{
     background-color: var(--hover-bg);
 }
+
+.sidebar-menu-item-expanded-extras{
+   display: flex;
+   flex-direction: column;
+   margin-top: 0.8rem;
+}
+
+.sidebar-menu-item-expanded-extras-you,
+ .sidebar-menu-item-expanded-extras-explore,
+ .sidebar-menu-item-expanded-extras-more{
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+
+.sidebar-you, .sidebar-explore, .sidebar-more{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding-left: 1rem;
+}
+
+.sidebar-you h2, .sidebar-explore h2{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+

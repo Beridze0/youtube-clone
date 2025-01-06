@@ -10,8 +10,8 @@ const Navbar = ({toggleSidebar}) => {
   return (
     <div className='navbar'>
         <div className='navbar-left-side'>
-            <LuMenu onClick={toggleSidebar} size={22} className='navbar-menu-icon' />
-            <ImYoutube2 size={75} className='navbar-logo' />
+            <LuMenu onClick={toggleSidebar} size={21} className='navbar-menu-icon' />
+            <ImYoutube2 size={65} className='navbar-logo' />
         </div>
         <div className='navbar-search'>
             <div className='navbar-search-container'>

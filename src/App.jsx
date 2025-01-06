@@ -18,10 +18,12 @@ const App = () => {
   return (
     <div>
       <Navbar toggleSidebar={toggleSidebar}  />
-      <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
+      <div className='sidebar-with-routes'>
+        <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </div>
     </div>
   )
 }
