@@ -1,5 +1,5 @@
 .navbar{
-    padding: 0 0.7rem;
+    padding: 0 1.1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,6 +47,7 @@
     border: none;
     background-color: transparent;
     outline: none;
+    color: var(--text-primary);
 }
 
 .navbar-right-side{
