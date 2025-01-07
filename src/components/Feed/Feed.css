@@ -1,3 +1,63 @@
 .feed{
-    border: 1px solid red;
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 320px));
+    justify-content: center;
+}
+
+
+.feed-video-item{
+    display: flex;
+    flex-direction: column;
+    max-width: 315px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.feed-video-item-img{
+    width: 330px;
+    height: 215px;
+    border-radius: 0.5rem;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.feed-video-item-img:hover{
+    scale: 1.005;
+    border-radius: 0;
+}
+
+
+.feed-video-item-info{
+    padding: 0.1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.feed-video-item-about p, .feed-video-item-about b{
+    margin: 0;
+}
+
+.feed-video-item-about p{
+    font-size: 0.8rem;
+    width: fit-content;
+    color: var(--text-secondary);
+}
+
+.feed-video-item-person:hover{
+    color: var(--text-primary);
+}
+
+.feed-video-item-about b{
+    margin-bottom: 0.1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.feed-video-item-about{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
 }

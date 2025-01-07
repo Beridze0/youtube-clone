@@ -1,21 +1,27 @@
+.categories-container-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 65px;
+  background-color: var(--primary-bg);
+  gap: 1rem;
+  z-index: 999;
+}
 .categories{
     overflow-x: scroll;
     margin: 0 auto;
     display: flex;
     gap: 0.5rem;
     padding: 0.1rem 0rem;
+    z-index: 1000;
+    background-color: var(--primary-bg);
   }
 
   .categories::-webkit-scrollbar{
     display: none;
   }
 
-  .categories-container-top{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
   
   .categories-container{
     position: relative;
