@@ -1,0 +1,25 @@
+.categories-item{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 0.45rem; 
+    background-color: var(--button-bg);
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.categories-item p{
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.categories-item:hover{
+    background-color: var(--button-hover);
+}

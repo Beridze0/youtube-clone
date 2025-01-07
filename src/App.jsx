@@ -3,8 +3,11 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
+import Category from './components/Category/Category'
 
 const App = () => {
+
+  
 
   const location = useLocation()
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false)
@@ -15,14 +18,21 @@ const App = () => {
     setIsSidebarExpanded(prev => !prev)
   }
 
+  const styles = {
+    width : isSidebarExpanded? "80%" : "93%"
+}
+
   return (
     <div>
       <Navbar toggleSidebar={toggleSidebar}  />
       <div className='sidebar-with-routes'>
         <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />
-        <Routes>
-          <Route path='/' element={<Home isSidebarExpanded={isSidebarExpanded} />} />
-        </Routes>
+        <div className='vertical'  style={styles}>
+          <Category />
+          <Routes>
+            <Route path='/' element={<Home isSidebarExpanded={isSidebarExpanded} />} />
+          </Routes>
+        </div>
       </div>
     </div>
   )

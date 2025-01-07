@@ -1,12 +1,12 @@
 .sidebar{
     padding-left: 0.2rem;
-    width: fit-content;
     display: flex;
     flex-direction: column;
     position: sticky;
     overflow-y: scroll;
     height: calc(100vh-65px); 
     top: 65px;
+    z-index: 900;
     left: 0;
     background-color: var(--primary-bg);
 }

@@ -10,12 +10,12 @@ body{
 
 :root {
   --primary-bg: #ffffff; /* Pure white background */
-  --secondary-bg: #efeeee; /* Light gray cards/elements */
+  --secondary-bg: #fafafa; /* Light gray cards/elements */
   --text-primary: #000000; /* Black text */
   --text-secondary: #444444; /* Dark gray text */
-  --border-color: #cccccc; /* Medium gray borders */
-  --button-bg: #dddddd; /* Light gray button */
-  --button-hover: #cccccc; /* Slightly darker button hover */
+  --border-color: #f3f0f0; /* Medium gray borders */
+  --button-bg: #f1f1f1; /* Light gray button */
+  --button-hover: #dfdfdf; /* Slightly darker button hover */
   --accent-color: #ff4500; /* Bright orange-red for accents */
   --link-color: #0000ee; /* Classic blue links */
   --hover-bg: #eeeeee; /* Hover background */
@@ -40,3 +40,10 @@ body{
   display: flex;
   gap: 0.5rem;
 }
+
+.vertical{
+  display: flex;
+  flex-direction: column;
+}
+
+

@@ -1,12 +1,8 @@
 .home{
     padding: 0.5rem 1rem;
-    border: 1px solid red;
     margin: 0;
 }
 
-.home-categories-container{
-    width: 90%;
-}
 
 .home-categories{
     display: flex;
