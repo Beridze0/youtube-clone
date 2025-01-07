@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { LuMenu } from "react-icons/lu";
 import { ImYoutube2 } from "react-icons/im";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import Categories from '../Categories/Categories';
+import { PiMicrophoneFill } from "react-icons/pi";
 
 const Navbar = ({toggleSidebar}) => {
 
@@ -49,6 +49,7 @@ const Navbar = ({toggleSidebar}) => {
                     <input type="text" placeholder='Search' className='navbar-search-input' />
                     <FiSearch />
                 </div>
+                <PiMicrophoneFill className='navbar-mic' size={23} />
             </div>
             <div className='navbar-right-side'>
                 <IoMdNotificationsOutline size={23} className='navbar-notification-icon' />

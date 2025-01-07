@@ -39,7 +39,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
+    gap: 0.8rem;
 }
 
 .navbar-search-container{
@@ -77,3 +78,14 @@
     background-color: var(--button-hover);
 }
 
+.navbar-mic{
+    cursor: pointer;
+    padding: 0.5rem 0.55rem;
+    border-radius: 50%;
+    transition: 0.25s;
+    background-color: var(--button-bg);
+}
+
+.navbar-mic:hover{
+    background-color: var(--button-hover);
+}
