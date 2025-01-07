@@ -36,7 +36,8 @@ const Sidebar = ({isExpanded}) => {
 
 
   const styles = {
-    height: `${screenHeight-65}px` //65 is navbar Height
+    height: `${screenHeight-65}px`, //65 is navbar Height
+    overflowY: isExpanded ? "scroll" : "hidden"
   };
   
 

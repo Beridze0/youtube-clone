@@ -21,7 +21,7 @@ const App = () => {
       <div className='sidebar-with-routes'>
         <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home isSidebarExpanded={isSidebarExpanded} />} />
         </Routes>
       </div>
     </div>

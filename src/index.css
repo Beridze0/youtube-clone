@@ -10,7 +10,7 @@ body{
 
 :root {
   --primary-bg: #ffffff; /* Pure white background */
-  --secondary-bg: #f8f8f8; /* Light gray cards/elements */
+  --secondary-bg: #efeeee; /* Light gray cards/elements */
   --text-primary: #000000; /* Black text */
   --text-secondary: #444444; /* Dark gray text */
   --border-color: #cccccc; /* Medium gray borders */
@@ -38,5 +38,5 @@ body{
 
 .sidebar-with-routes{
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
