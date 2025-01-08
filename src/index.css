@@ -9,7 +9,7 @@ body{
 }
 
 :root {
-  --primary-bg: #ffffff; /* Pure white background */
+  --primary-bg: #fcfafa; /* Pure white background */
   --secondary-bg: #fafafa; /* Light gray cards/elements */
   --text-primary: #000000; /* Black text */
   --text-secondary: #444444; /* Dark gray text */
@@ -17,16 +17,18 @@ body{
   --button-bg: #f1f1f1; /* Light gray button */
   --button-hover: #dfdfdf; /* Slightly darker button hover */
   --accent-color: #ff4500; /* Bright orange-red for accents */
-  --link-color: #0000ee; /* Classic blue links */
+  --link-color: #0707ae; /* Classic blue links */
   --hover-bg: #eeeeee; /* Hover background */
+  --border-color-secondary : rgb(212, 212, 212);
+  --options-bg: white;
 }
 
 
 
 [data-theme="dark"] {
-  --primary-bg: #222222; /* Dark gray background */
+  --primary-bg: #0d0d0d; /* Dark gray background */
   --secondary-bg: #333333; /* Slightly lighter gray for cards/elements */
-  --text-primary: #ffffff; /* Pure white text */
+  --text-primary: #e3e3e3; /* Pure white text */
   --text-secondary: #aaaaaa; /* Light gray text */
   --border-color: #555555; /* Medium gray borders */
   --button-bg: #444444; /* Medium gray button */
@@ -34,6 +36,8 @@ body{
   --accent-color: #ff6347; /* Bright tomato red for accents */
   --link-color: #1e90ff; /* Classic dodger blue links */
   --hover-bg: #383838; /* Hover background */
+  --border-color-secondary : #4c4c4c;
+  --options-bg: rgb(34, 34, 34);
 }
 
 .sidebar-with-routes{

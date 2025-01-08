@@ -1,0 +1,99 @@
+.options{
+    border-radius: 0.7rem;
+    background-color: var(--options-bg);
+    position: absolute;
+    top: 17px;
+    right: 50px;
+    min-width: 300px;
+    z-index: 10000;
+}
+
+.options p{
+    font-size: 0.8rem;
+}
+
+.options .options-account-fullname{
+    font-size: 1.02rem;
+}
+
+.options-account-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-inline: 1.1rem;
+    border-bottom: 1px solid var(--border-color-secondary);
+}
+
+.options-account-details p{
+    margin: 0;
+}
+
+.options-account-profile-info{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.options-account-create-channel{
+    padding-left: 2.4rem;
+}
+
+.create-channel{
+    color: var(--link-color);
+}
+
+.options-container-top{
+    max-height: 84vh;
+    overflow-y: scroll;
+    border-radius: 0.7rem;
+    padding-right: 0.3rem;
+    scroll-behavior: smooth;
+}
+
+
+.options-container-top::-webkit-scrollbar {
+    width: 4px;
+}
+
+.options-container-top:hover::-webkit-scrollbar-track {
+    background: var(--border-color-secondary);
+}
+
+.options-container-top:hover::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+.options-container-top:hover::-webkit-scrollbar-thumb:hover {
+    background: darkgray;
+}
+
+
+
+
+
+.options-container{
+    display: flex;
+    flex-direction: column;
+    padding-block: 0.6rem;
+    border-bottom: 1px solid var(--border-color-secondary);
+
+}
+
+.options-item{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    cursor: pointer;
+    padding-left: 1.1rem;
+    padding-right: 3rem;
+}
+
+.options-item:hover{
+    background-color: var(--button-hover);
+}
+
+.options-container-last{
+    border-bottom: none;
+}

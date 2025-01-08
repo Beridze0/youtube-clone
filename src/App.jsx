@@ -4,6 +4,7 @@ import Home from './pages/Home/Home'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
 import Category from './components/Category/Category'
+import Options from './components/Options/Options'
 
 const App = () => {
 

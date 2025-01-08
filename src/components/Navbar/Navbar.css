@@ -30,6 +30,8 @@
 
 .navbar-logo{
     cursor: pointer;
+    width: 60px;
+    height: 30px;
 }
 
 .navbar-menu-icon{
@@ -114,4 +116,15 @@
 
 .navbar-mic:hover{
     background-color: var(--button-hover);
+}
+
+
+.navbar-profile-icon{
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar-profile-icon:hover{
+    scale: 1.2;
 }

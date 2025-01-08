@@ -7,6 +7,7 @@
   background-color: var(--primary-bg);
   gap: 1rem;
   z-index: 999;
+  padding-bottom: 1rem;
 }
 .categories{
     overflow-x: scroll;
@@ -41,22 +42,29 @@
   
   
   .categories::before,
-  .categories::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 20px;
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  .categories::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0));
-  }
-  
-  .categories::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.906), rgba(255, 255, 255, 0));
-  }
+.categories::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Adjust the width as needed */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.categories::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0));
+}
+
+.categories::after {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0));
+}
+
+[data-theme="dark"] .categories::before {
+  background: linear-gradient(to right, rgba(13, 13, 13, 0.88), rgba(13, 13, 13, 0));
+}
+
+[data-theme="dark"] .categories::after {
+  background: linear-gradient(to left, rgba(13, 13, 13, 0.88), rgba(13, 13, 13, 0));
+}

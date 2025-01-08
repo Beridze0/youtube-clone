@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import { FiSearch } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
@@ -40,6 +40,12 @@ const Navbar = ({toggleSidebar}) => {
         "Travel",
         ];
 
+        const [isOpen, setIsOpen] = useState(false)
+
+        const toggleOptions = () =>{
+            setIsOpen(prev => !prev)
+        }
+
   return (
     <div className='navbar'>
         <div className='navbar-options'>
@@ -58,9 +64,8 @@ const Navbar = ({toggleSidebar}) => {
                 <button className='navbar-create-btn'><AiOutlinePlus size={20} /> Create</button>
                 <IoMdNotificationsOutline size={23} className='navbar-notification-icon' />
                 <div className='navbar-options'>
-                    <CgProfile size={20} />
-                        <Options />
-
+                    <CgProfile onClick={toggleOptions} size={20} className='navbar-profile-icon' />
+                    { isOpen && <Options setIsOpen={setIsOpen} isOpen={isOpen} /> }
                 </div>
             </div>
         </div>
