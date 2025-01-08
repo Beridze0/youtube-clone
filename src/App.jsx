@@ -13,6 +13,7 @@ const App = () => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false)
 
   const sidebarVisible = location.pathname === '/'
+  const categoriesVisible = location.pathname != '/'
 
   const toggleSidebar = () =>{
     setIsSidebarExpanded(prev => !prev)
@@ -28,7 +29,9 @@ const App = () => {
       <div className='sidebar-with-routes'>
         <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />
         <div className='vertical'  style={styles}>
-          <Category />
+          {
+            !categoriesVisible && <Category /> 
+          }
           <Routes>
             <Route path='/' element={<Home isSidebarExpanded={isSidebarExpanded} />} />
           </Routes>

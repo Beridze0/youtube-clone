@@ -9,6 +9,7 @@
     z-index: 900;
     left: 0;
     background-color: var(--primary-bg);
+    min-width: 62px;
 }
 
 

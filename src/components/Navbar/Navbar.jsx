@@ -7,6 +7,8 @@ import { ImYoutube2 } from "react-icons/im";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { PiMicrophoneFill } from "react-icons/pi";
 import { AiOutlinePlus } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+import Options from '../Options/Options';
 
 const Navbar = ({toggleSidebar}) => {
 
@@ -43,7 +45,7 @@ const Navbar = ({toggleSidebar}) => {
         <div className='navbar-options'>
             <div className='navbar-left-side'>
                 <LuMenu onClick={toggleSidebar} size={21} className='navbar-menu-icon' />
-                <ImYoutube2 size={65} className='navbar-logo' />
+                <Link to={'/'}><ImYoutube2 size={65} className='navbar-logo' /></Link>
             </div>
             <div className='navbar-search'>
                 <div className='navbar-search-container'>
@@ -55,7 +57,11 @@ const Navbar = ({toggleSidebar}) => {
             <div className='navbar-right-side'>
                 <button className='navbar-create-btn'><AiOutlinePlus size={20} /> Create</button>
                 <IoMdNotificationsOutline size={23} className='navbar-notification-icon' />
-                <CgProfile size={20} />
+                <div className='navbar-options'>
+                    <CgProfile size={20} />
+                        <Options />
+
+                </div>
             </div>
         </div>
     </div>

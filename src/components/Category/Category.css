@@ -46,8 +46,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 20px; /* Adjust for fade width */
-    pointer-events: none; /* Allow clicks to pass through */
+    width: 20px;
+    pointer-events: none;
     z-index: 1;
   }
   
