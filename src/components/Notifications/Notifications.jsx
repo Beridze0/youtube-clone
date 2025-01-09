@@ -1,20 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Notifications.css'
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 
-const Notifications = () => {
+const Notifications = ({isOpen, setIsOpen}) => {
+
+    const [isNotification, setIsNotification] = useState(false)
+    
+
   return (
     <div className='notifications'>
         <div className='notifications-header'>
             <h1>Notifications</h1>
-            <IoSettingsOutline />
+            <IoSettingsOutline size={21} className='notifications-settings' />
         </div>
         <div className='notifications-container'>
-            <IoMdNotificationsOutline size={50} className='notifications-bell-icon' />
-            <p className='notifications-text-big'>Your notifications live here</p>
-            <p className='notifications-text'>Subscribe to your favorite channels to get notified about their latest videos.</p>
+            {
+                !isNotification? 
+                    <div className='empty-notifications'>
+                        <IoMdNotificationsOutline size={130} className='notifications-bell-icon' />
+                        <p className='notifications-text-big'>Your notifications live here</p>
+                        <p className='notifications-text'>Subscribe to your favorite channels to get notified about their latest videos.</p>
+                    </div> :
+
+                    <div className='notification-message'>
+                        <p>There is one notification</p>
+                    </div>
+            }
+            
         </div>
     </div>
   )

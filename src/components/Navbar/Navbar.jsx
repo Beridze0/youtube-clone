@@ -42,12 +42,17 @@ const Navbar = ({toggleSidebar}) => {
         ];
 
         const [isOpen, setIsOpen] = useState(false)
+        const [isNotificationsOpen, setIsNotificationOpen] = useState(false)
         const [darkMode, setDarkMode] = useState(
             JSON.parse(localStorage.getItem('darkMode')) || false
           );
 
         const toggleOptions = () =>{
             setIsOpen(prev => !prev)
+        }
+
+        const toggleNotifications = () =>{
+            setIsNotificationOpen(prev => !prev)
         }
 
         
@@ -86,8 +91,10 @@ const Navbar = ({toggleSidebar}) => {
             </div>
             <div className='navbar-right-side'>
                 <button className='navbar-create-btn'><AiOutlinePlus size={20} /> Create</button>
-                <IoMdNotificationsOutline size={23} className='navbar-notification-icon' />
-                <Notifications />
+                <IoMdNotificationsOutline size={23} className='navbar-notification-icon' onClick={toggleNotifications} />
+                {
+                    isNotificationsOpen && <Notifications />
+                }
                 <div className='navbar-options-icon'>
                     <CgProfile onClick={toggleOptions} size={20} className='navbar-profile-icon' />
                     { isOpen && 
