@@ -12,10 +12,15 @@
     min-width: 62px;
 }
 
-.sidebar a{
+.sidebar a.sidebar-menu-item{
     text-decoration: none;
     color: var(--text-primary);
-    padding-right: 3rem;
+}
+
+.sidebar a.sidebar-menu-item-expanded, a.sidebar-menu-item-extra {
+    text-decoration: none;
+    color: var(--text-primary);
+    padding-right: 5rem;
 }
 .sidebar::-webkit-scrollbar {
     width: 5px;

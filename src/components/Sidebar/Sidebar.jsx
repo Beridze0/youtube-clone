@@ -202,6 +202,7 @@ const Sidebar = ({isExpanded}) => {
         <p>YouTube Kids</p>
       </NavLink>
     </div>
+    
   </div>
 ) : (
     <div className={isExpanded ? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'}>
