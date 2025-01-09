@@ -43,7 +43,9 @@ const Options = ({isOpen, setIsOpen, darkMode, handleDarkMode, toggleOptions}) =
     useEffect(() => {
         const handleClickOutside = (event) => {
           if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setIsOpen(false);
+            setTimeout(()=>{
+                setIsOpen(false)
+            },150);
           }
         };
     
@@ -66,10 +68,7 @@ const Options = ({isOpen, setIsOpen, darkMode, handleDarkMode, toggleOptions}) =
                 <div>
                     <p className='options-account-fullname'>Davit Beridze</p>
                     <p>davitberidze@gmail.com</p>
-                </div>
-                <div className='options-close'>
-                    <IoMdClose size={20} onClick={toggleOptions} />
-                </div>      
+                </div>     
             </div>
             
             <div className='options-account-create-channel'>

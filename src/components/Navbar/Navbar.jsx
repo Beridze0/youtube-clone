@@ -84,16 +84,18 @@ const Navbar = ({toggleSidebar}) => {
                         <input type="text" placeholder='Search' className='navbar-search-input' />
                     </div>
                     <div className='navbar-search-icon-container'>
-                        <FiSearch className='navbar-search-icon' size={21} />
+                        <FiSearch className='navbar-search-icon' size={20} />
                     </div>
                 </div>
                 <PiMicrophoneFill className='navbar-mic' size={21} />
             </div>
             <div className='navbar-right-side'>
                 <button className='navbar-create-btn'><AiOutlinePlus size={20} /> Create</button>
-                <IoMdNotificationsOutline size={23} className='navbar-notification-icon' onClick={toggleNotifications} />
+                <IoMdNotificationsOutline size={23} className='navbar-notification-icon' 
+                    onClick={toggleNotifications }
+                     />
                 {
-                    isNotificationsOpen && <Notifications />
+                    isNotificationsOpen && <Notifications setIsNotificationOpen={setIsNotificationOpen} isNotificationsOpen={isNotificationsOpen} />
                 }
                 <div className='navbar-options-icon'>
                     <CgProfile onClick={toggleOptions} size={20} className='navbar-profile-icon' />

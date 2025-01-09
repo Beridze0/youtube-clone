@@ -2,18 +2,11 @@
     border-radius: 0.7rem;
     background-color: var(--options-bg);
     position: absolute;
-    top: 17px;
-    right: 17px;
+    top: 15px;
+    right: 60px;
     min-width: 300px;
     z-index: 10000;
 }
-
-.options-close{
-    display: flex;
-    margin-left: 3rem;
-    cursor: pointer;
-}
-
 
 .options p{
     font-size: 0.8rem;

@@ -1,16 +1,53 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Notifications.css'
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 
-const Notifications = ({isOpen, setIsOpen}) => {
+const Notifications = ({isNotificationOpen, setIsNotificationOpen}) => {
 
     const [isNotification, setIsNotification] = useState(false)
     
+    const menuRef = useRef(null)
+    
+        
+    
+    
+        useEffect(() => {
+            const body = document.querySelector('body');
+            if (isNotificationOpen) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+    
+            return () => {
+                body.style.overflow = '';
+            };
+        }, [isNotificationOpen]);
+    
+    
+        
+       useEffect(() => {
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setTimeout(() => {
+                setIsNotificationOpen(false);
+            }, 150);
+        }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+    };
+}, [setIsNotificationOpen]);
+
+        
 
   return (
-    <div className='notifications'>
+    <div className='notifications' ref={menuRef}>
         <div className='notifications-header'>
             <h1>Notifications</h1>
             <IoSettingsOutline size={21} className='notifications-settings' />

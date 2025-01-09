@@ -83,6 +83,10 @@
     cursor: pointer;
 }
 
+.navbar-search-icon-container:hover{
+    background-color: var(--input-icon-hover);
+}
+
 
 .navbar-search-input{
     width: 100%;
