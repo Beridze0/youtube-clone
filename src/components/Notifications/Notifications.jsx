@@ -4,7 +4,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 
-const Notifications = ({isNotificationOpen, setIsNotificationOpen}) => {
+const Notifications = ({setIsNotificationOpen, isNotificationOpen}) => {
 
     const [isNotification, setIsNotification] = useState(false)
     
@@ -15,6 +15,7 @@ const Notifications = ({isNotificationOpen, setIsNotificationOpen}) => {
     
         useEffect(() => {
             const body = document.querySelector('body');
+            console.log('isNotificationOpen:', isNotificationOpen);
             if (isNotificationOpen) {
                 body.style.overflow = 'hidden';
             } else {
@@ -27,6 +28,8 @@ const Notifications = ({isNotificationOpen, setIsNotificationOpen}) => {
         }, [isNotificationOpen]);
     
     
+        
+
         
        useEffect(() => {
     const handleClickOutside = (event) => {

@@ -12,7 +12,11 @@
     min-width: 62px;
 }
 
-
+.sidebar a{
+    text-decoration: none;
+    color: var(--text-primary);
+    padding-right: 3rem;
+}
 .sidebar::-webkit-scrollbar {
     width: 5px;
     background-color: transparent;
@@ -35,7 +39,9 @@
     background: #555;
 }
 
-
+.active{
+    background-color: var(--hover-bg);
+}
 
 .sidebar-menu-item{
     display: flex;

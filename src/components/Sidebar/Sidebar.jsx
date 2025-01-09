@@ -16,6 +16,7 @@ import { HiOutlineTrophy } from "react-icons/hi2";
 import { FaYoutube } from "react-icons/fa";
 import { SiYoutubemusic } from "react-icons/si";
 import { SiYoutubekids } from "react-icons/si";
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = ({isExpanded}) => {
 
@@ -42,97 +43,174 @@ const Sidebar = ({isExpanded}) => {
   
 
   return (
-    <div className='sidebar' style={styles} >
-        <div className={isExpanded? 'sidebar-menu-item-expanded expanded-home-icon' : 'sidebar-menu-item'}>
-            <MdHome size={24} />
-            <p>Home</p>
-        </div>
-        <div className={isExpanded? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'}>
-            <SiYoutubeshorts size={21}  />
-            <p>Shorts</p>
-        </div>
-        <div className={isExpanded? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'}>
-            <MdOutlineSubscriptions size={23} />
-            <p>Subscriptions</p>
-        </div>
-        {
-            isExpanded? 
-            <div className='sidebar-menu-item-expanded-extras'>
-                {/* You */}
-                <div className='sidebar-menu-item-expanded-extras-you'>
-                    <div className='sidebar-menu-item-extra sidebar-you'>
-                        <h2>You</h2>
-                        <MdKeyboardArrowRight size={20} />
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <VscHistory size={22} />
-                        <p>History</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <RiPlayListLine  size={22} />
-                        <p className='sidebar-menu-playlist'>Playlists</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <GoClock size={23} />
-                        <p>Watch later</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <BiLike size={23} />
-                        <p>Liked videos</p>
-                    </div>
-                </div>
+    <div className='sidebar' style={styles}>
+  <NavLink
+    to="/"
+    className={({ isActive }) =>
+      `${isExpanded ? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'} ${isActive ? 'active' : ''}`
+    }
+  >
+    <MdHome size={24} />
+    <p>Home</p>
+  </NavLink>
+  <NavLink
+    to="/shorts"
+    className={({ isActive }) =>
+      `${isExpanded ? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'} ${isActive ? 'active' : ''}`
+    }
+  >
+    <SiYoutubeshorts size={21} />
+    <p>Shorts</p>
+  </NavLink>
+  <NavLink
+    to="/subscriptions"
+    className={({ isActive }) =>
+      `${isExpanded ? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'} ${isActive ? 'active' : ''}`
+    }
+  >
+    <MdOutlineSubscriptions size={23} />
+    <p>Subscriptions</p>
+  </NavLink>
 
-                {/* Explore */}
-                <div className='sidebar-menu-item-expanded-extras-explore'>
-                    <div className='sidebar-menu-item-extra sidebar-explore'>
-                        <h2>Explore</h2>
-                        <MdKeyboardArrowRight size={20} />
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <IoIosTrendingUp size={22} />
-                        <p>Trending</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <IoMusicalNotesOutline  size={22} />
-                        <p>Music</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <SiYoutubegaming size={23} />
-                        <p>Gaming</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <HiOutlineTrophy size={23} />
-                        <p>Sports</p>
-                    </div>
-                </div>
-
-                {/* More from youtube */}
-                <div className='sidebar-menu-item-expanded-extras-more'>
-                    <div className='sidebar-menu-item-extra sidebar-more'>
-                        <h2>More from YouTube</h2>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <FaYoutube size={22} />
-                        <p>YouTube Premium</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <SiYoutubemusic  size={22} />
-                        <p>YouTube Music</p>
-                    </div>
-                    <div className='sidebar-menu-item-extra'>
-                        <SiYoutubekids size={23} />
-                        <p>YouTube Kids</p>
-                    </div>
-                </div>
-            </div> 
-            : 
-            <div className={isExpanded? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'}>
-            <CgProfile size={23} />
-            <p>You</p>
-        </div>
+  {isExpanded ? (
+  <div className="sidebar-menu-item-expanded-extras">
+    {/* You */}
+    <div className="sidebar-menu-item-expanded-extras-you">
+      <NavLink
+        to="/you"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra sidebar-you ${isActive ? 'active' : ''}`
         }
-        
+      >
+        <h2>You</h2>
+        <MdKeyboardArrowRight size={20} />
+      </NavLink>
+      <NavLink
+        to="/history"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <VscHistory size={22} />
+        <p>History</p>
+      </NavLink>
+      <NavLink
+        to="/playlists"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <RiPlayListLine size={22} />
+        <p className="sidebar-menu-playlist">Playlists</p>
+      </NavLink>
+      <NavLink
+        to="/watch-later"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <GoClock size={23} />
+        <p>Watch later</p>
+      </NavLink>
+      <NavLink
+        to="/liked-videos"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <BiLike size={23} />
+        <p>Liked videos</p>
+      </NavLink>
     </div>
+
+    {/* Explore */}
+    <div className="sidebar-menu-item-expanded-extras-explore">
+      <NavLink
+        to="/explore"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra sidebar-explore ${isActive ? 'active' : ''}`
+        }
+      >
+        <h2>Explore</h2>
+        <MdKeyboardArrowRight size={20} />
+      </NavLink>
+      <NavLink
+        to="/trending"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <IoIosTrendingUp size={22} />
+        <p>Trending</p>
+      </NavLink>
+      <NavLink
+        to="/music"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <IoMusicalNotesOutline size={22} />
+        <p>Music</p>
+      </NavLink>
+      <NavLink
+        to="/gaming"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <SiYoutubegaming size={23} />
+        <p>Gaming</p>
+      </NavLink>
+      <NavLink
+        to="/sports"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <HiOutlineTrophy size={23} />
+        <p>Sports</p>
+      </NavLink>
+    </div>
+
+    {/* More from YouTube */}
+    <div className="sidebar-menu-item-expanded-extras-more">
+      <NavLink
+        to="/premium"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <FaYoutube size={22} />
+        <p>YouTube Premium</p>
+      </NavLink>
+      <NavLink
+        to="/music-app"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <SiYoutubemusic size={22} />
+        <p>YouTube Music</p>
+      </NavLink>
+      <NavLink
+        to="/kids"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <SiYoutubekids size={23} />
+        <p>YouTube Kids</p>
+      </NavLink>
+    </div>
+  </div>
+) : (
+    <div className={isExpanded ? 'sidebar-menu-item-expanded' : 'sidebar-menu-item'}>
+      <CgProfile size={23} />
+      <p>You</p>
+    </div>
+  )}
+</div>
+
   )
 }
 

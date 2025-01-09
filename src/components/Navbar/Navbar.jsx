@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
-import { FiSearch } from "react-icons/fi";
+import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { LuMenu } from "react-icons/lu";
 import { ImYoutube2 } from "react-icons/im";
@@ -42,7 +42,7 @@ const Navbar = ({toggleSidebar}) => {
         ];
 
         const [isOpen, setIsOpen] = useState(false)
-        const [isNotificationsOpen, setIsNotificationOpen] = useState(false)
+        const [isNotificationOpen, setIsNotificationOpen] = useState(false)
         const [darkMode, setDarkMode] = useState(
             JSON.parse(localStorage.getItem('darkMode')) || false
           );
@@ -84,7 +84,7 @@ const Navbar = ({toggleSidebar}) => {
                         <input type="text" placeholder='Search' className='navbar-search-input' />
                     </div>
                     <div className='navbar-search-icon-container'>
-                        <FiSearch className='navbar-search-icon' size={20} />
+                        <CiSearch className='navbar-search-icon' size={20} />
                     </div>
                 </div>
                 <PiMicrophoneFill className='navbar-mic' size={21} />
@@ -95,7 +95,7 @@ const Navbar = ({toggleSidebar}) => {
                     onClick={toggleNotifications }
                      />
                 {
-                    isNotificationsOpen && <Notifications setIsNotificationOpen={setIsNotificationOpen} isNotificationsOpen={isNotificationsOpen} />
+                    isNotificationOpen && <Notifications setIsNotificationOpen={setIsNotificationOpen} isNotificationOpen={isNotificationOpen} />
                 }
                 <div className='navbar-options-icon'>
                     <CgProfile onClick={toggleOptions} size={20} className='navbar-profile-icon' />

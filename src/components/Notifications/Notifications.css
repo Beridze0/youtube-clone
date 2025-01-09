@@ -4,7 +4,7 @@
     position: absolute;
     top: 53px;
     right: 70px;
-    background-color: var(--secondary-bg);
+    background-color: var(--options-bg);
     border-radius: 0.8rem;
     height: 85vh;
     width: 31vw;

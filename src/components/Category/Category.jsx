@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Category.css'
 import Categories from '../Categories/Categories'
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
@@ -22,23 +22,26 @@ const Category = () => {
         "Kids",
         "DIY & Crafts",
         "Travel",
-        "DIY & Crafts",
-        "Travel",
-        "DIY & Crafts",
-        "Travel",
-        "DIY & Crafts",
-        "Travel",
-        "DIY & Crafts",
-        "Travel",
-        "DIY & Crafts",
-        "Travel",
         ];
+
+        const categoriesRef = useRef(null);
+    const scrollCategories = (direction) => {
+        const scrollAmount = 200;
+        if (categoriesRef.current) {
+            categoriesRef.current.scrollBy({
+                left: direction === 'right' ? scrollAmount : -scrollAmount,
+                behavior: 'smooth',
+            });
+        }
+    };
 
   return (
     <div className='categories-container-top'>
-        <MdOutlineKeyboardArrowLeft className='category-arrow'  size={25}/>
+        <MdOutlineKeyboardArrowLeft className='category-arrow'  size={25}
+            onClick={() => scrollCategories('left')}
+        />
         <div className='categories-container'>
-            <div className='categories'>
+            <div className='categories' ref={categoriesRef}>
                 {
                     categories.map((category, index)=>(
                         <Categories key={index} category={category}  />
@@ -46,7 +49,9 @@ const Category = () => {
                 }
             </div>
         </div>
-        <MdOutlineKeyboardArrowRight className='category-arrow'  size={25} />
+        <MdOutlineKeyboardArrowRight className='category-arrow'  size={25}
+            onClick={() => scrollCategories('right')}
+            />
     </div>
   )
 }
