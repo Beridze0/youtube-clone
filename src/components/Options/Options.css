@@ -3,10 +3,17 @@
     background-color: var(--options-bg);
     position: absolute;
     top: 17px;
-    right: 50px;
+    right: 17px;
     min-width: 300px;
     z-index: 10000;
 }
+
+.options-close{
+    display: flex;
+    margin-left: 3rem;
+    cursor: pointer;
+}
+
 
 .options p{
     font-size: 0.8rem;
@@ -54,11 +61,11 @@
 
 
 .options-container-top::-webkit-scrollbar {
-    width: 4px;
+    width: 2px;
 }
 
 .options-container-top:hover::-webkit-scrollbar-track {
-    background: var(--border-color-secondary);
+    background: transparent;
 }
 
 .options-container-top:hover::-webkit-scrollbar-thumb {

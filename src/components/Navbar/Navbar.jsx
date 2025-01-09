@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import { FiSearch } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
@@ -41,10 +41,29 @@ const Navbar = ({toggleSidebar}) => {
         ];
 
         const [isOpen, setIsOpen] = useState(false)
+        const [darkMode, setDarkMode] = useState(
+            JSON.parse(localStorage.getItem('darkMode')) || false
+          );
 
         const toggleOptions = () =>{
             setIsOpen(prev => !prev)
         }
+
+        
+          useEffect(() => {
+            document.querySelector('body').setAttribute('data-theme', darkMode ? 'dark' : 'light');
+          }, [darkMode]);
+
+
+          const handleDarkMode = () => {
+            setDarkMode((prev) => {
+              const newMode = !prev;
+              localStorage.setItem('darkMode', JSON.stringify(newMode));
+              return newMode;
+            });
+          };
+
+         
 
   return (
     <div className='navbar'>
@@ -65,7 +84,13 @@ const Navbar = ({toggleSidebar}) => {
                 <IoMdNotificationsOutline size={23} className='navbar-notification-icon' />
                 <div className='navbar-options'>
                     <CgProfile onClick={toggleOptions} size={20} className='navbar-profile-icon' />
-                    { isOpen && <Options setIsOpen={setIsOpen} isOpen={isOpen} /> }
+                    { isOpen && 
+                    <Options 
+                        setIsOpen={setIsOpen}
+                        isOpen={isOpen}
+                        darkMode={darkMode}
+                        toggleOptions={toggleOptions}
+                        handleDarkMode={handleDarkMode} /> }
                 </div>
             </div>
         </div>

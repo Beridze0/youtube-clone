@@ -128,3 +128,9 @@
 .navbar-profile-icon:hover{
     scale: 1.2;
 }
+
+.navbar-options-btn{
+    border: none;
+    background-color: red;
+    padding: 1rem;
+}

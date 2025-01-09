@@ -8,6 +8,24 @@ body{
   font-family: "Inter", serif;
 }
 
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(84, 83, 83);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+
+
+
 :root {
   --primary-bg: #fcfafa; /* Pure white background */
   --secondary-bg: #fafafa; /* Light gray cards/elements */

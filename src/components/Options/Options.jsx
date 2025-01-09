@@ -15,25 +15,15 @@ import { FaRegKeyboard } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdHelpOutline } from "react-icons/md";
 import { MdOutlineFeedback } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
 
-const Options = ({isOpen, setIsOpen}) => {
+const Options = ({isOpen, setIsOpen, darkMode, handleDarkMode, toggleOptions}) => {
 
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || "light");
+
     const menuRef = useRef(null)
 
-    const toggleTheme = () => {
-        setTheme(prevTheme => {
-            const newTheme = prevTheme === "dark" ? "light" : "dark";
-            // Save the new theme to localStorage
-            localStorage.setItem('theme', newTheme);
-            return newTheme;
-        });
-    };
+    
 
-    // Apply the theme to the body when the theme state changes
-    useEffect(() => {
-        document.querySelector('body').setAttribute('data-theme', theme);
-    }, [theme]);
 
     useEffect(() => {
         const body = document.querySelector('body');
@@ -62,21 +52,26 @@ const Options = ({isOpen, setIsOpen}) => {
         return () => {
           document.removeEventListener('mousedown', handleClickOutside);
         };
-      }, [setIsOpen]);
+      }, []);
     
 
   return (
     <div ref={menuRef} className='options'>
+        
         <div className='options-account-details'>
             <div className='options-account-profile-info'>
                 <div>
-                    <CgProfile  size={30}/>
+                    <CgProfile size={30} />
                 </div>
                 <div>
                     <p className='options-account-fullname'>Davit Beridze</p>
                     <p>davitberidze@gmail.com</p>
                 </div>
+                <div className='options-close'>
+                    <IoMdClose size={20} onClick={toggleOptions} />
+                </div>      
             </div>
+            
             <div className='options-account-create-channel'>
                 <p className='create-channel'>Create a channel</p>
             </div>
@@ -115,10 +110,11 @@ const Options = ({isOpen, setIsOpen}) => {
                     <FaDatabase size={22} />
                     <p>Your data in YouTube</p>
                 </div>
-                <div className='options-item' onClick={toggleTheme}>
+                <div className='options-item' onClick={handleDarkMode}>
                     <IoMoonOutline size={22} />
-                    {/* darktheme */}
-                    <p>Appearance: {theme === "dark"? "Dark" : "Light"}</p> 
+                    <p>
+                        Appearance: {darkMode ? 'Dark' : 'Light'}
+                    </p>
                 </div>
                 <div className='options-item'>
                     <HiLanguage size={22} />
