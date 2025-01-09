@@ -1,0 +1,42 @@
+.notifications{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    background-color: var(--secondary-bg);
+    border-radius: 1rem;
+}
+
+.notifications-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.notifications-header h1{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.notifications-settings{
+    cursor: pointer;
+    padding: 0.3rem;
+    transition: 0.2s;
+}
+
+.notifications-settings:hover{
+    background-color: var(--button-hover);
+}
+
+.notifications-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0.5rem;
+}
+
+.notifications-text-big, .notifications-text, .notifications-bell-icon{
+    color: var(--text-secondary);
+}

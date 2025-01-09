@@ -51,16 +51,38 @@
     align-items: center;
     width: 40%;
     gap: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1.4rem;
 }
-
 .navbar-search-container{
     display: flex;
+    justify-content: center;
     align-items: center;
-    border: 1px solid rgb(178, 178, 178);
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
+    gap: 1rem;
     width: 100%;
 }
+
+.navbar-search-input-container{
+    display: flex;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 0.7rem 1rem;
+    width: 100%;
+}
+
+.navbar-search-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-bg);
+    border-left: 1px solid var(--border-color);
+    padding: 0.64rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0 1.3rem 1.3rem 0;
+    cursor: pointer;
+}
+
 
 .navbar-search-input{
     width: 100%;
@@ -100,6 +122,7 @@
     padding: 0.6rem;
     border-radius: 50%;
     transition: 0.25s;
+    position: relative;
 }
 
 .navbar-notification-icon:hover{
@@ -108,7 +131,7 @@
 
 .navbar-mic{
     cursor: pointer;
-    padding: 0.5rem 0.55rem;
+    padding: 0.65rem 0.55rem;
     border-radius: 50%;
     transition: 0.25s;
     background-color: var(--button-bg);
@@ -118,6 +141,11 @@
     background-color: var(--button-hover);
 }
 
+.navbar-options-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .navbar-profile-icon{
     position: relative;
@@ -127,10 +155,4 @@
 
 .navbar-profile-icon:hover{
     scale: 1.2;
-}
-
-.navbar-options-btn{
-    border: none;
-    background-color: red;
-    padding: 1rem;
 }

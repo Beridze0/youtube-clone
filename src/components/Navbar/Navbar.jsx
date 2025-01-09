@@ -9,6 +9,7 @@ import { PiMicrophoneFill } from "react-icons/pi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import Options from '../Options/Options';
+import Notifications from '../Notifications/Notifications';
 
 const Navbar = ({toggleSidebar}) => {
 
@@ -72,17 +73,22 @@ const Navbar = ({toggleSidebar}) => {
                 <LuMenu onClick={toggleSidebar} size={21} className='navbar-menu-icon' />
                 <Link to={'/'}><ImYoutube2 size={65} className='navbar-logo' /></Link>
             </div>
-            <div className='navbar-search'>
-                <div className='navbar-search-container'>
-                    <input type="text" placeholder='Search' className='navbar-search-input' />
-                    <FiSearch />
+            <div className='navbar-search-container'>
+                <div className='navbar-search'>
+                    <div className='navbar-search-input-container'>
+                        <input type="text" placeholder='Search' className='navbar-search-input' />
+                    </div>
+                    <div className='navbar-search-icon-container'>
+                        <FiSearch className='navbar-search-icon' size={21} />
+                    </div>
                 </div>
-                <PiMicrophoneFill className='navbar-mic' size={23} />
+                <PiMicrophoneFill className='navbar-mic' size={21} />
             </div>
             <div className='navbar-right-side'>
                 <button className='navbar-create-btn'><AiOutlinePlus size={20} /> Create</button>
                 <IoMdNotificationsOutline size={23} className='navbar-notification-icon' />
-                <div className='navbar-options'>
+                <Notifications />
+                <div className='navbar-options-icon'>
                     <CgProfile onClick={toggleOptions} size={20} className='navbar-profile-icon' />
                     { isOpen && 
                     <Options 
