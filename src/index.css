@@ -57,6 +57,7 @@ body::-webkit-scrollbar-thumb:hover {
   --hover-bg: #383838; /* Hover background */
   --border-color-secondary : #4c4c4c;
   --options-bg: rgb(34, 34, 34);
+  --input-icon-hover: transparent;
 }
 
 .sidebar-with-routes{

@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar/Sidebar'
 import Category from './components/Category/Category'
 import Options from './components/Options/Options'
 import Notifications from './components/Notifications/Notifications'
+import VideoPage from './pages/VideoPage/VideoPage'
 
 const App = () => {
 
@@ -29,13 +30,16 @@ const App = () => {
     <div>
       <Navbar toggleSidebar={toggleSidebar}  />
       <div className='sidebar-with-routes'>
-        <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />
+        {
+          sidebarVisible && <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />
+        }
         <div className='vertical'  style={styles}>
           {
             !categoriesVisible && <Category /> 
           }
           <Routes>
             <Route path='/' element={<Home isSidebarExpanded={isSidebarExpanded} />} />
+            <Route path='/watch/1' element={<VideoPage />} />
           </Routes>
         </div>
       </div>
