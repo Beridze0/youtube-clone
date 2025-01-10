@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './VideoPage.css'
 import gentleman1 from '../../assets/gentleman1.png'
 import { GiRamProfile } from "react-icons/gi";
 import { BiDownload, BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
 import { PiShareFatLight } from "react-icons/pi";
+import { MdOutlineSort } from "react-icons/md";
 
 const VideoPage = () => {
 
@@ -18,6 +19,11 @@ const VideoPage = () => {
     const displayMore = description.length > maxLength
     const sliceDescription = description.slice(0, maxLength)
 
+    const [openAddComment, setOpenAddComment] = useState(false)
+
+    const toggleAddComment = () =>{
+        setOpenAddComment(prev => !prev)
+    }
 
   return (
     <div className='video-page-container'>
@@ -66,14 +72,52 @@ const VideoPage = () => {
                 <div className='video-description'>
                     <p>
                         {sliceDescription}<p className='description-more'>...more</p>
-                        
                     </p>
                 </div>
             </div>
 
             <div className='comments-section'>
+                <div className='comment-count'>
+                    <h1>1,388 Comments</h1>
+                    <div className='sort'>
+                        <MdOutlineSort />
+                        <p>Sort By</p>
+                    </div>
+                </div>
 
+                {
+                    openAddComment? 
+                    <div className='add-comment' onClick={toggleAddComment}>
+                        <div className='comment-your-profile-icon'>
+                            <GiRamProfile />
+                        </div>
+                        <div className='add-comment-input'>
+                            <input type="text" placeholder='Add comment...' />
+                        </div>
+                    </div> 
+                    : 
+                    <div className='opened-add-comment'>
+                        <p>Commenting as</p>
+                        <div className='comment-your-profile'>
+                            <GiRamProfile />
+                            <div className='comment-your-profile-name'>
+                                <p>Lorem Ipsum</p>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                            <div className='add-comment-input'>
+                                <input type="text" placeholder='Add a comment...' />
+                            </div>
+                            <div className='add-comment-btn'>
+                                <button>Cancel</button>
+                                <button>Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                }
             </div>
+
         </div>
     </div>
   )
