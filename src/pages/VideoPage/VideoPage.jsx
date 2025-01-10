@@ -7,6 +7,18 @@ import { BiDislike } from "react-icons/bi";
 import { PiShareFatLight } from "react-icons/pi";
 
 const VideoPage = () => {
+
+    const description = `Dance with me the gallowdance As long as we're not hanging
+                        As long as we still can my love we both know the string is
+                        always ready Dance with me the gallowdance As long as we're not hanging
+                        As long as we still can my love we both know the string is
+                        always ready`
+
+    const maxLength = 185
+    const displayMore = description.length > maxLength
+    const sliceDescription = description.slice(0, maxLength)
+
+
   return (
     <div className='video-page-container'>
         <div className='video-page-content'>
@@ -44,6 +56,18 @@ const VideoPage = () => {
                     <div className='video-download'>
                         <button className='download-btn'><BiDownload size={21} /> Download</button>
                     </div>
+                </div>
+            </div>
+
+            <div className='video-description-container'>
+                <div className='video-views'>
+                    <p>3M views 11 years ago</p>
+                </div>
+                <div className='video-description'>
+                    <p>
+                        {sliceDescription}<p className='description-more'>...more</p>
+                        
+                    </p>
                 </div>
             </div>
 

@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div>
-      <Navbar toggleSidebar={toggleSidebar}  />
+      <Navbar {...(sidebarVisible && { toggleSidebar })} />
       <div className='sidebar-with-routes'>
         {
           sidebarVisible && <Sidebar toggleSidebar={toggleSidebar} isExpanded={isSidebarExpanded} />

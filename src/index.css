@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 :root {
   --primary-bg: #fcfafa; /* Pure white background */
-  --secondary-bg: #fafafa; /* Light gray cards/elements */
+  --secondary-bg: #f3eded; /* Light gray cards/elements */
   --text-primary: #000000; /* Black text */
   --text-secondary: #444444; /* Dark gray text */
   --text-reverse: #f0f0f0;

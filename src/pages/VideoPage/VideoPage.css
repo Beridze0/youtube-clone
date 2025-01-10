@@ -1,13 +1,24 @@
 .video-page-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+}
+
+.video-player-container{
+    border: 1px solid black;
+    height: 52%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .video-player-container img{
-    width: 80%;
-    height: 40%;
-    border: 1px solid green;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.video-page-content{
+    flex-basis: 69%;
+    padding-left: 5rem;
 }
 
 .video-info-section{
@@ -103,6 +114,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-primary);
     gap: 0.3rem;
     font-weight: 600;
     padding-inline: 0.5rem;
@@ -113,7 +125,7 @@
     cursor: pointer;
 }
 
-.like-dislike-container:hover, .video-share:hover, .video-download:hover{
+.like-btn:hover, .dislike-btn:hover, .share-btn:hover, .download-btn:hover{
     opacity: 0.7;
 }
 
@@ -125,4 +137,31 @@
 
 .dislike-btn{
     border-left: 1px solid gray;
+}
+
+.video-description-container{
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.video-views p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.video-description p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.video-description p .description-more{
+    font-weight: 600;
+    font-size: 0.8rem;
 }
