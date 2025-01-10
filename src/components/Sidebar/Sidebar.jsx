@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Sidebar.css'
+import { NavLink } from 'react-router-dom';
 import { MdHome } from "react-icons/md";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdOutlineSubscriptions } from "react-icons/md";
@@ -16,7 +17,11 @@ import { HiOutlineTrophy } from "react-icons/hi2";
 import { FaYoutube } from "react-icons/fa";
 import { SiYoutubemusic } from "react-icons/si";
 import { SiYoutubekids } from "react-icons/si";
-import { NavLink } from 'react-router-dom';
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoFlagOutline } from "react-icons/io5";
+import { TfiHelpAlt } from "react-icons/tfi";
+import { MdOutlineFeedback } from "react-icons/md";
+
 
 const Sidebar = ({isExpanded}) => {
 
@@ -174,6 +179,10 @@ const Sidebar = ({isExpanded}) => {
 
     {/* More from YouTube */}
     <div className="sidebar-menu-item-expanded-extras-more">
+    
+        <h2 className='more-from-youtube'>More from YouTube</h2>
+       
+
       <NavLink
         to="/premium"
         className={({ isActive }) =>
@@ -202,6 +211,47 @@ const Sidebar = ({isExpanded}) => {
         <p>YouTube Kids</p>
       </NavLink>
     </div>
+
+
+     <div className="sidebar-menu-item-expanded-extras-more">
+      <NavLink
+        to="/settings"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <IoSettingsOutline size={22} />
+        <p>Settings</p>
+      </NavLink>
+      <NavLink
+        to="/report-history"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <IoFlagOutline size={22} />
+        <p>Report History</p>
+      </NavLink>
+      <NavLink
+        to="/help"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <TfiHelpAlt size={23} />
+        <p>Help</p>
+      </NavLink>
+      <NavLink
+        to="/feedback"
+        className={({ isActive }) =>
+          `sidebar-menu-item-extra ${isActive ? 'active' : ''}`
+        }
+      >
+        <MdOutlineFeedback size={23} />
+        <p>Send feedback</p>
+      </NavLink>
+    </div>
+    
     
   </div>
 ) : (

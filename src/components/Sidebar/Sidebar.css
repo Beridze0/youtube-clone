@@ -48,6 +48,7 @@
     background-color: var(--hover-bg);
 }
 
+
 .sidebar-menu-item{
     display: flex;
     flex-direction: column;
@@ -60,6 +61,11 @@
 
 .expanded-home-icon{
     margin-top: 0.35rem;
+}
+
+
+.more-from-youtube{
+    padding: 0.8rem;
 }
 
 .sidebar-menu-item-expanded, .sidebar-menu-item-extra{
@@ -105,14 +111,14 @@
 }
 
 
-.sidebar-you, .sidebar-explore, .sidebar-more{
+.sidebar-you, .sidebar-explore, .sidebar-more, .more-from-youtube{
     display: flex;
     align-items: center;
     gap: 0.3rem;
     padding-left: 1rem;
 }
 
-.sidebar-you h2, .sidebar-explore h2{
+.sidebar-you h2, .sidebar-explore h2, .more-from-youtube{
     font-size: 1rem;
     font-weight: 600;
     margin: 0;
