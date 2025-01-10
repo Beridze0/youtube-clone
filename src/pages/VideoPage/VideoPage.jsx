@@ -79,40 +79,43 @@ const VideoPage = () => {
             <div className='comments-section'>
                 <div className='comment-count'>
                     <h1>1,388 Comments</h1>
-                    <div className='sort'>
-                        <MdOutlineSort />
+                    <div className='sort-by'>
+                        <MdOutlineSort size={26} />
                         <p>Sort By</p>
                     </div>
                 </div>
 
                 {
                     openAddComment? 
-                    <div className='add-comment' onClick={toggleAddComment}>
-                        <div className='comment-your-profile-icon'>
-                            <GiRamProfile />
-                        </div>
-                        <div className='add-comment-input'>
-                            <input type="text" placeholder='Add comment...' />
-                        </div>
-                    </div> 
-                    : 
                     <div className='opened-add-comment'>
                         <p>Commenting as</p>
-                        <div className='comment-your-profile'>
-                            <GiRamProfile />
-                            <div className='comment-your-profile-name'>
-                                <p>Lorem Ipsum</p>
-                                <p>Lorem Ipsum</p>
+                        <div className='comment-your-profile-container'>
+                            <div className='comment-your-profile'>
+                                <GiRamProfile className='channel-avatar-img' size={30} />
+                                <div className='comment-your-profile-name'>
+                                    <p>Lorem Ipsum</p>
+                                    <p>@Lorem Ipsum</p>
+                                </div>
                             </div>
-                            <div className='add-comment-input'>
-                                <input type="text" placeholder='Add a comment...' />
+                            <div className='add-comment-input-container'>
+                                <input className='add-comment-input' type="text" placeholder='Add a comment...' />
                             </div>
                             <div className='add-comment-btn'>
-                                <button>Cancel</button>
-                                <button>Comment</button>
+                                <button className='comment-cancel-btn' onClick={toggleAddComment}>Cancel</button>
+                                <button className='comment-comment-btn' disabled>Comment</button>
                             </div>
                         </div>
                     </div>
+                    :
+                    <div className='add-comment' onClick={toggleAddComment}>
+                        <div className='channel-avatar'>
+                            <GiRamProfile className='channel-avatar-img' size={30} />
+                        </div>
+                        <div className='add-comment-input-container'>
+                            <input className='add-comment-input' type="text" placeholder='Add comment...' />
+                        </div>
+                    </div> 
+                    
                     
 
                 }

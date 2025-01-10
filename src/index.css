@@ -27,13 +27,13 @@ body::-webkit-scrollbar-thumb:hover {
 
 :root {
   --primary-bg: #fcfafa; /* Pure white background */
-  --secondary-bg: #f3eded; /* Light gray cards/elements */
+  --secondary-bg: #ececec; /* Light gray cards/elements */
   --text-primary: #000000; /* Black text */
   --text-secondary: #444444; /* Dark gray text */
   --text-reverse: #f0f0f0;
   --border-color: #bababa; /* Medium gray borders */
-  --button-bg: #eeeaea; /* Light gray button */
-  --button-hover: #dfdfdf; /* Slightly darker button hover */
+  --button-bg: #ececec; /* Light gray button */
+  --button-hover: #d3d3d3; /* Slightly darker button hover */
   --accent-color: #ff4500; /* Bright orange-red for accents */
   --link-color: #0707ae; /* Classic blue links */
   --hover-bg: #eeeeee; /* Hover background */

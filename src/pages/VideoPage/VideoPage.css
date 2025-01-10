@@ -167,3 +167,102 @@
     font-weight: 600;
     font-size: 0.8rem;
 }
+
+.comments-section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.comment-count{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.comment-count h1{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.sort-by{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-by p{
+    font-size: 0.9rem;
+}
+
+.add-comment{
+    display: flex;
+    gap: 1rem;
+}
+
+.add-comment-input-container{
+    width: 100%;
+}
+
+.add-comment-input{
+    width: 100%;
+    border: none;
+    padding: 0.3rem 0rem 0.3rem 0.3rem ;
+    border-bottom: 1px solid gray;
+    font-size: 0.95rem;
+    background-color: transparent;
+    outline: none;
+}
+
+.opened-add-comment{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-your-profile-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-your-profile{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.comment-your-profile-name p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.comment-your-profile-name{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.add-comment-btn{
+    display: flex;
+    gap: 0.5rem;
+    align-self: end;
+    margin-top: 0.7rem;
+}
+
+.comment-cancel-btn, .comment-comment-btn{
+    background-color: transparent;
+    border: none;
+    padding: 0.7rem 1.3rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.92rem;
+}
+
+.comment-cancel-btn:hover{
+    background-color: var(--button-bg);
+}
+
+.comment-comment-btn:disabled{
+    background-color: var(--button-bg);
+}
