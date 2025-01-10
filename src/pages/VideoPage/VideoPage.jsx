@@ -35,14 +35,14 @@ const VideoPage = () => {
 
                 <div className='video-actions'>
                     <div className='like-dislike-container'>
-                        <button><BiLike /> 87K</button>
-                        <button><BiDislike /> 0</button>
+                        <button className='like-btn'><BiLike size={21} /> 87K</button>
+                        <button className='dislike-btn'><BiDislike size={21} /> 0</button>
                     </div>
                     <div className='video-share'>
-                        <button><PiShareFatLight /> Share</button>
+                        <button className='share-btn'><PiShareFatLight size={21} /> Share</button>
                     </div>
                     <div className='video-download'>
-                        <button><BiDownload /> Download</button>
+                        <button className='download-btn'><BiDownload size={21} /> Download</button>
                     </div>
                 </div>
             </div>
