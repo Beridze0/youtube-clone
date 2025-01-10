@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './VideoPage.css'
 import gentleman1 from '../../assets/gentleman1.png'
 import { GiRamProfile } from "react-icons/gi";
@@ -19,11 +19,19 @@ const VideoPage = () => {
     const displayMore = description.length > maxLength
     const sliceDescription = description.slice(0, maxLength)
 
+    const inputRef = useRef(null)
+
     const [openAddComment, setOpenAddComment] = useState(false)
 
     const toggleAddComment = () =>{
         setOpenAddComment(prev => !prev)
+        setTimeout(() => {
+            if (!openAddComment && inputRef.current) {
+                inputRef.current.focus();
+            }
+        }, 150);
     }
+
 
   return (
     <div className='video-page-container'>
@@ -98,7 +106,7 @@ const VideoPage = () => {
                                 </div>
                             </div>
                             <div className='add-comment-input-container'>
-                                <input className='add-comment-input' type="text" placeholder='Add a comment...' />
+                                <input ref={inputRef} className='add-comment-input' type="text" placeholder='Add a comment...' />
                             </div>
                             <div className='add-comment-btn'>
                                 <button className='comment-cancel-btn' onClick={toggleAddComment}>Cancel</button>
