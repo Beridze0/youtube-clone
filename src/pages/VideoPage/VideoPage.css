@@ -7,4 +7,73 @@
 .video-player-container img{
     width: 80%;
     height: 40%;
+    border: 1px solid green;
+}
+
+.video-info-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title h1{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.channel-info{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.channel-avatar-img{
+    background-color: var(--border-color-secondary);
+    padding: 0.4rem;
+    border-radius: 50%;
+}
+
+.channel-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-right: 1rem;
+}
+
+.channel-details p{
+    margin: 0;
+}
+
+.channel-name{
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.channel-subscribers{
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+.channel-subscribe-section{
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-button{
+    padding: 0.65rem 1.25rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    border: none;
+    font-weight: 600;
+    background-color: var(--subscribe-button-bg);
+    color: var(--text-reverse);
+    cursor: pointer;
+}
+
+.subscribe-button:hover{
+    opacity: 0.9;
 }

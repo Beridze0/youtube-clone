@@ -31,6 +31,7 @@ body::-webkit-scrollbar-thumb:hover {
   --secondary-bg: #fafafa; /* Light gray cards/elements */
   --text-primary: #000000; /* Black text */
   --text-secondary: #444444; /* Dark gray text */
+  --text-reverse: #f0f0f0;
   --border-color: #bababa; /* Medium gray borders */
   --button-bg: #f3f3f3; /* Light gray button */
   --button-hover: #dfdfdf; /* Slightly darker button hover */
@@ -40,6 +41,7 @@ body::-webkit-scrollbar-thumb:hover {
   --border-color-secondary : rgb(212, 212, 212);
   --options-bg: white;
   --input-icon-hover: rgb(238, 238, 238);
+  --subscribe-button-bg: #0d0d0d;
 }
 
 
@@ -49,6 +51,7 @@ body::-webkit-scrollbar-thumb:hover {
   --secondary-bg: #232323; /* Slightly lighter gray for cards/elements */
   --text-primary: #f0f0f0; /* Pure white text */
   --text-secondary: #aaaaaa; /* Light gray text */
+  --text-reverse: #000000;
   --border-color: #2f2f2f; /* Medium gray borders */
   --button-bg: #222222; /* Medium gray button */
   --button-hover: #555555; /* Slightly lighter button hover */
@@ -58,6 +61,7 @@ body::-webkit-scrollbar-thumb:hover {
   --border-color-secondary : #4c4c4c;
   --options-bg: rgb(34, 34, 34);
   --input-icon-hover: transparent;
+  --subscribe-button-bg: #fcfafa;
 }
 
 .sidebar-with-routes{
