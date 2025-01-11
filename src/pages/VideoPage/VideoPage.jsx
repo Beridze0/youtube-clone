@@ -6,6 +6,7 @@ import { BiDownload, BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
 import { PiShareFatLight } from "react-icons/pi";
 import { MdOutlineSort } from "react-icons/md";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const VideoPage = () => {
 
@@ -157,8 +158,23 @@ const VideoPage = () => {
 
                 }
             </div>
-
         </div>
+
+
+        <div className='recommended'>
+                <div className='recommended-video-content'>
+                    <div className='recommended-video-img-container'>
+                        <img className='recommended-video-img' src={gentleman1} alt="" />
+                    </div>
+                    <div className='recommended-video-info'>
+                        <h1>Clam Casino - Im God extended vocal loop with enhancements</h1>
+                        <p>SubjectOmega</p>
+                        <p>558K views &bull; 5 years ago</p>
+                    </div>
+                    <BsThreeDotsVertical className='recommended-three-dot' size={19} />
+                </div>
+        </div>
+
     </div>
   )
 }
