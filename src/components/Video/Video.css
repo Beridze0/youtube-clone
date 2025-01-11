@@ -1,0 +1,220 @@
+.video-player-container{
+    border: 1px solid black;
+    height: 52%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.video-player-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.video-page-content{
+    flex-basis: 62%;
+    padding-left: 4rem;
+}
+
+.video-info-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title{
+    margin-bottom: 0.8rem;
+}
+
+.video-title h1{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.channel-info{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.channel-avatar-img{
+    background-color: var(--border-color-secondary);
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.channel-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-right: 1rem;
+}
+
+.channel-details p{
+    margin: 0;
+}
+
+.channel-name{
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+}
+
+.channel-subscribers{
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+.channel-subscribe-section{
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-button{
+    padding: 0.65rem 1.25rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    border: none;
+    font-weight: 600;
+    background-color: var(--subscribe-button-bg);
+    color: var(--text-reverse);
+    cursor: pointer;
+}
+
+.subscribe-button:hover{
+    opacity: 0.9;
+}
+
+.video-actions{
+    display: flex;
+    gap: 0.5rem;
+    align-items: end;
+    padding-bottom: 0.4rem;
+}
+
+.like-dislike-container, .video-share, .video-download{
+    background-color: var(--button-bg);
+    border-radius: 2rem;
+    display: flex;
+    text-align: center;
+    padding: 0.5rem;
+    gap: 0.2rem;
+}
+
+.like-btn, .dislike-btn, .share-btn, .download-btn{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    gap: 0.3rem;
+    font-weight: 600;
+    padding-inline: 0.5rem;
+    background-color: transparent;
+    font-size: 0.85rem;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.like-btn:hover, .dislike-btn:hover, .share-btn:hover, .download-btn:hover{
+    opacity: 0.7;
+}
+
+
+.like-btn{
+    
+    margin-right: 0.5rem;
+}
+
+.dislike-btn{
+    border-left: 1px solid gray;
+}
+
+.video-description-container{
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.video-views p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.video-description p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.video-description p .description-more{
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.description-more{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: 0.2s;
+}
+
+.description-more:active{
+    background-color: var(--button-hover);
+}
+
+.show-less-btn{
+    border: none;
+    font-weight: 600;
+    font-size: 0.87rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0;
+    background-color: inherit;
+    border-radius: 1rem;
+    transition: 0.2s;
+}
+
+.show-less-btn:active{
+    background-color: var(--button-hover);
+}
+
+.comments-section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+
+.comment-count{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.comment-count h1{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.sort-by{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-by p{
+    font-size: 0.9rem;
+}

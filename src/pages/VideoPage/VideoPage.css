@@ -306,23 +306,28 @@
 .recommended{
     border: 1px solid red;
     flex-basis: 31%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .recommended-video-content{
     display: flex;
     gap: 0.5rem;
-
+    cursor: pointer;
 }
 
 .recommended-video-img-container{
-    width: 300px;
-    height: 100px;
+    width: 295px;
+    height: 95px;
     border: 1px solid black;
+    border-radius: 0.7rem;
 }
 
 .recommended-video-img{
     width: 100%;
     height: 100%;
+    border-radius: inherit;
 }
 
 .recommended-video-info{
@@ -346,5 +351,5 @@
 }
 
 .recommended-three-dot{
-    padding-top: 0.8rem;
+    padding-top: 0.4rem;
 }
