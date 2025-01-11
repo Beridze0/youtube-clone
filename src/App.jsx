@@ -7,6 +7,7 @@ import Category from './components/Category/Category'
 import Options from './components/Options/Options'
 import Notifications from './components/Notifications/Notifications'
 import VideoPage from './pages/VideoPage/VideoPage'
+import Settings from './pages/Settings/Settings'
 
 const App = () => {
 
@@ -40,6 +41,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home isSidebarExpanded={isSidebarExpanded} />} />
             <Route path='/watch/1' element={<VideoPage />} />
+            <Route path='/settings' element={<Settings />} />
           </Routes>
         </div>
       </div>
