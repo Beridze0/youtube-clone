@@ -7,7 +7,7 @@ const Home = ({isSidebarExpanded}) => {
 
   return (
     <div className='home' >
-       <Feed />
+       <Feed isSidebarExpanded={isSidebarExpanded} />
     </div>
   )
 }

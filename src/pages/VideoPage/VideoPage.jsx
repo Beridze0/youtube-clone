@@ -13,21 +13,41 @@ const VideoPage = () => {
                         As long as we still can my love we both know the string is
                         always ready Dance with me the gallowdance As long as we're not hanging
                         As long as we still can my love we both know the string is
-                        always ready`
+                        always ready Video by: Larissa Iceglass, William Maybelline
+                        Cinematography: Lebanon Hanover
+                        Music by: Lebanon Hanover
+                        Published by: Fabrika Records
+                        © 2013 
+
+
+                        Dance with me the gallowdance
+                        As long as we're not hanging
+                        As long as we still can my love
+                        we both know the string is always ready
+
+                        Dance with me the gallowdance
+                        for all the degradation is this land
+                        Dance with me the Gallowdance
+                        as disorientated as you can`
 
     const maxLength = 185
-    const displayMore = description.length > maxLength
     const sliceDescription = description.slice(0, maxLength)
 
     const inputRef = useRef(null)
 
     const [openAddComment, setOpenAddComment] = useState(false)
+    const [showDescription, setShowDescription] = useState(false)
+
+
+    const toggleShowDescription = () =>{
+        setShowDescription(prev => !prev)
+    }
 
     const toggleAddComment = () =>{
         setOpenAddComment(prev => !prev)
         setTimeout(() => {
             if (!openAddComment && inputRef.current) {
-                inputRef.current.focus();
+                inputRef.current.focus({preventScroll: true});
             }
         }, 150);
     }
@@ -73,14 +93,23 @@ const VideoPage = () => {
                 </div>
             </div>
 
-            <div className='video-description-container'>
+            <div className='video-description-container' onClick={showDescription? null : toggleShowDescription }>
                 <div className='video-views'>
                     <p>3M views 11 years ago</p>
                 </div>
                 <div className='video-description'>
-                    <p>
-                        {sliceDescription}<p className='description-more'>...more</p>
-                    </p>
+                    {
+                        showDescription? 
+                        <>
+                            <p>{description}</p>
+                            <button className='show-less-btn' onClick={toggleShowDescription}>Show less</button>
+                        </>
+                            :
+                            <p>
+                                {sliceDescription}<button className='description-more' on>...more</button>
+                            </p>
+
+                    }
                 </div>
             </div>
 

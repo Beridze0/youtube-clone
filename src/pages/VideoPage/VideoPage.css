@@ -168,6 +168,34 @@
     font-size: 0.8rem;
 }
 
+.description-more{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: 0.2s;
+}
+
+.description-more:active{
+    background-color: var(--button-hover);
+}
+
+.show-less-btn{
+    border: none;
+    font-weight: 600;
+    font-size: 0.87rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0;
+    background-color: inherit;
+    border-radius: 1rem;
+    transition: 0.2s;
+}
+
+.show-less-btn:active{
+    background-color: var(--button-hover);
+}
+
 .comments-section{
     display: flex;
     flex-direction: column;
@@ -267,3 +295,4 @@
 .comment-comment-btn:disabled{
     background-color: var(--button-bg);
 }
+
