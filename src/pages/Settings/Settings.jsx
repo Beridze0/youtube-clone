@@ -1,5 +1,6 @@
 import React from 'react'
 import './Settings.css'
+import { Link } from 'react-router-dom'
 
 const Settings = () => {
   return (
@@ -51,7 +52,29 @@ const Settings = () => {
             <div className='account-settings-your-account'>
                 <h1>Your account</h1>
                 <p className='account-settings-small-txt'>You sign in to YouTube with your Google Account</p>
-                
+                <div className='settings-your-account-item'>
+                    <p>Google Account</p>
+                    <div className='account-settings-actions'>
+                        <Link>View or change your Google Account settings</Link>
+                        <p>You will be redirected to your Google Account page</p>
+                    </div>
+                </div>
+                <div className='settings-your-account-item'>
+                    <p>Family Center</p>
+                    <div className='account-settings-actions'>
+                        <Link>Manage kids profiles and features for teens</Link>
+                        <p>Tools to connect parents, kids, and teens on YouTube</p>
+                    </div>
+                </div>
+                <div className='settings-your-account-item'>
+                    <p>Membership</p>
+                    <div className='account-settings-actions'>
+                        <p><span className='membership-status'>No membership</span>
+                            <Link>Get YouTube Premium</Link>
+                        </p>
+                        <p>YouTube Premium offers uninterrupted music, ad-free videos, and more</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

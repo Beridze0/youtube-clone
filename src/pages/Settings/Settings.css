@@ -101,10 +101,46 @@
     cursor: pointer;
 }
 
-
-
-.account-settings-small-txt{
-    color: var(--text-secondary);
-    margin: 0;
-    margin-top: 0.5rem;
+.account-settings-your-account{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 700px;
+    border: 1px solid red;
 }
+
+
+.settings-your-account-item {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .settings-your-account-item p {
+    margin: 0;
+  }
+  
+  .account-settings-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .account-settings-actions a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  
+  .account-settings-actions a:hover {
+    text-decoration: underline;
+  }
+  
+  .account-settings-small-txt {
+    color: #555;
+    margin: 0;
+  }
+  
+  .membership-status {
+    margin-right: 5px;
+    color: #000;
+    font-weight: bold;
+  }
