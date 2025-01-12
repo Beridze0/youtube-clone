@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb:hover {
   --button-bg: #efefef; /* Light gray button */
   --button-hover: #d3d3d3; /* Slightly darker button hover */
   --accent-color: #ff4500; /* Bright orange-red for accents */
-  --link-color: #0707ae; /* Classic blue links */
+  --link-color: #0474fd; /* Classic blue links */
   --hover-bg: #eeeeee; /* Hover background */
   --border-color-secondary : rgb(212, 212, 212);
   --options-bg: white;

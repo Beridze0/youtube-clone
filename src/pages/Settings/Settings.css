@@ -71,3 +71,40 @@
     margin-bottom: 1rem;
     color: var(--text-secondary);
 }
+
+.account-settings-small-txt{
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.account-settings-create-channel p{
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.account-settings-create-channel{
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.settings-create-channel-btn{
+    border: none;
+    background-color: transparent;
+    color: var(--link-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+
+
+.account-settings-small-txt{
+    color: var(--text-secondary);
+    margin: 0;
+    margin-top: 0.5rem;
+}
