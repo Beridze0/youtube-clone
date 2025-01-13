@@ -2,7 +2,9 @@ import React from 'react'
 
 const Performance = () => {
   return (
-    <div>Performance</div>
+    <div className='performance'>
+
+    </div>
   )
 }
 
