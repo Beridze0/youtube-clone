@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import './SettingsNotifications.css'
 import Switch from '@mui/material/Switch'
+import { FormControl, InputLabel, MenuItem, Select, Typography } from '@mui/material'
 
 const SettingsNotifications = () => {
 
-  const [language, setLanguage] = useState("English")
+  const [language, setLanguage] = useState(localStorage.getItem("language") || "English (US)")
+
+  const handleChange = (event) => {
+    setLanguage(event.target.value);
+    localStorage.setItem("language", JSON.stringify(event.target.value))
+  };
 
   return (
     <div className='settings-notifications'>
@@ -148,9 +154,24 @@ const SettingsNotifications = () => {
                   <div className='language-header'>
                       <h1>Language</h1>
                   </div>
-                  <div className='choose-language'>
-                  
-                  </div>
+                  <div className="choose-language" >
+      <FormControl fullWidth >
+        <Select
+          value={language}
+          onChange={handleChange}
+          displayEmpty
+        >
+          <MenuItem value="English (US)">English (US)</MenuItem>
+          <MenuItem value="English (UK)">English (UK)</MenuItem>
+          <MenuItem value="French">French</MenuItem>
+          <MenuItem value="Spanish">Spanish</MenuItem>
+          <MenuItem value="German">German</MenuItem>
+        </Select>
+      </FormControl>
+      <Typography variant="body2" color="textSecondary" style={{ marginTop: '8px' }}>
+        This setting applies to emails only
+      </Typography>
+    </div>
               </div>
         </div>
     </div>
