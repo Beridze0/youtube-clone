@@ -1,9 +1,12 @@
 .settings-list-container{
     flex-basis: 18%;
+    position: sticky;
+    top: 65px;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
     margin-left: 0.5rem;
+    height: fit-content
 }
 
 .settings-list-container h1{

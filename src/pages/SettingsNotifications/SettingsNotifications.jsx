@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SettingsNotifications.css'
 import Switch from '@mui/material/Switch'
 
 const SettingsNotifications = () => {
+
+  const [language, setLanguage] = useState("English")
+
   return (
     <div className='settings-notifications'>
         <div className='settings-notifications-header'>
@@ -84,49 +87,71 @@ const SettingsNotifications = () => {
                 <div className='email-notifications-left'>
                     <p>Your family</p>
                     <p>Permission</p>
-                    <p>Your preferences</p>
                 </div>
 
                 <div className='email-notifications-right'>
                   <div className='switch-container'>
                     <Switch />
                     <div className='preferences'>
-                        <p>Promotional content and offerings</p>
-                        <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
+                        <p>Send me emails about family and product updates for YouTube or YouTube Kids</p>
+                        <p className='account-settings-small-txt'>By turning on this setting, you're opting in to emails with recommended content, tips, and product updates for families</p>
                     </div>
                   </div>
                   <div className='switch-container'>
                     <Switch />
                     <div className='preferences'>
-                        <p>Promotional content and offerings</p>
-                        <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
-                    </div>
-                  </div>
-                  <div className='preferences three-preferences'>
-                    <div className='switch-container'>
-                      <Switch />
-                      <div className='preferences'>
-                          <p>Promotional content and offerings</p>
-                          <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
-                      </div>
-                    </div>
-                    <div className='switch-container'>
-                      <Switch />
-                      <div className='preferences'>
-                          <p>Promotional content and offerings</p>
-                          <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
-                      </div>
-                    </div>
-                    <div className='switch-container'>
-                      <Switch />
-                      <div className='preferences'>
-                          <p>Promotional content and offerings</p>
-                          <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
-                      </div>
+                        <p>
+                        Send me emails about my YouTube activity and updates I requested</p>
+                        <p className='account-settings-small-txt'>
+                        If this setting is turned off, YouTube may still send you messages regarding your account, required service announcements, legal notifications, and privacy matters
+                        </p>
                     </div>
                   </div>
                 </div>
             </div>
+            
+            <div className='your-preferences three-preferences'>
+            <div className='preferences-header'>
+              <h1>Your Preferences</h1>
+            </div>
+                
+            <div className='preferences-container'>
+              <div className='switch-container'>
+                  <Switch />
+                  <div className='preferences'>
+                      <p>General product updates</p>
+                      <p className='account-settings-small-txt'>Announcements and recommendations</p>
+                  </div>
+              </div>
+              <div className='switch-container'>
+                  <Switch />
+                  <div className='preferences'>
+                      <p>YouTube Premium updates</p>
+                      <p className='account-settings-small-txt'>
+                      Announcements, updates, and recommendations from YouTube Premium and YouTube Music Premium
+                      </p>
+                  </div>
+              </div>
+              <div className='switch-container'>
+                  <Switch />
+                  <div className='preferences'>
+                      <p>Creator updates and announcements</p>
+                      <p className='account-settings-small-txt'>
+                      Product announcements, creator events, and personalized tips to grow your YouTube channel
+                      </p>
+                  </div>
+              </div>
+              </div>
+              </div>
+
+              <div className='notifications-language'>
+                  <div className='language-header'>
+                      <h1>Language</h1>
+                  </div>
+                  <div className='choose-language'>
+                  
+                  </div>
+              </div>
         </div>
     </div>
   )
