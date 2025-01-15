@@ -7,21 +7,21 @@ const SettingsNotifications = () => {
     <div className='settings-notifications'>
         <div className='settings-notifications-header'>
             <h1>Notifications</h1>
-            <p>Choose when and how to be notified</p>
+            <p className='big-txt'>Choose when and how to be notified</p>
             <p className='account-settings-small-txt'>Select push and email notifications you'd like to receive</p>
         </div>
 
         <div className='notifications-general'>
           <div className='general-header'>
             <h1>General</h1>
-            <p>Manage your mobile and desktop notifications</p>
+            <p className='account-settings-small-txt'>Manage your mobile and desktop notifications</p>
           </div>
           <div className='your-preferences'>
             <div className='preferences-header'>
               <h1>Your Preferences</h1>
             </div>
                 
-            <div className='preferences'>
+            <div className='preferences-container'>
               <div className='switch-container'>
                   <Switch />
                   <div className='preferences'>
@@ -102,11 +102,27 @@ const SettingsNotifications = () => {
                         <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
                     </div>
                   </div>
-                  <div className='switch-container'>
-                    <Switch />
-                    <div className='preferences'>
-                        <p>Promotional content and offerings</p>
-                        <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
+                  <div className='preferences three-preferences'>
+                    <div className='switch-container'>
+                      <Switch />
+                      <div className='preferences'>
+                          <p>Promotional content and offerings</p>
+                          <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
+                      </div>
+                    </div>
+                    <div className='switch-container'>
+                      <Switch />
+                      <div className='preferences'>
+                          <p>Promotional content and offerings</p>
+                          <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
+                      </div>
+                    </div>
+                    <div className='switch-container'>
+                      <Switch />
+                      <div className='preferences'>
+                          <p>Promotional content and offerings</p>
+                          <p className='account-settings-small-txt'>Notify me of promotional content and offerings, like members-only perks</p>
+                      </div>
                     </div>
                   </div>
                 </div>
