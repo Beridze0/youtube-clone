@@ -11,7 +11,7 @@ const Feed = () => {
 
   return (
     <div className='feed' >
-        <Link to={'watch/:id'} className='feed-video-item'>
+        <Link to={'watch/1'} className='feed-video-item'>
             <div className='feed-video-item-img-container'>
                 <img className='feed-video-item-img' src={photo} alt="" />
             </div>

@@ -8,8 +8,9 @@ const SettingsNotifications = () => {
   const [language, setLanguage] = useState(localStorage.getItem("language") || "English (US)")
 
   const handleChange = (event) => {
-    setLanguage(event.target.value);
-    localStorage.setItem("language", JSON.stringify(event.target.value))
+    const selectedLanguage = event.target.value;
+    setLanguage(selectedLanguage);
+    localStorage.setItem("language", selectedLanguage);   
   };
 
   return (

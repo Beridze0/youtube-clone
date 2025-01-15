@@ -24,9 +24,17 @@ const App = () => {
     setIsSidebarExpanded(prev => !prev)
   }
 
+  if(isSidebarExpanded === true){
+    setTimeout(() => {
+      setIsSidebarExpanded(false)
+    }, 10000);
+  }
+
   const styles = {
     width : isSidebarExpanded? "80%" : "93%"
 }
+
+
 
   return (
     <div>
