@@ -87,7 +87,7 @@
 
 .account-settings-create-channel{
     display: flex;
-    gap: 6rem;
+    gap: 8rem;
     align-items: center;
     margin-top: 2rem;
 }
@@ -96,7 +96,8 @@
     border: none;
     background-color: transparent;
     color: var(--link-color);
-    font-weight: 600;
+    font-weight: 500;
+    text-decoration: none;
     font-size: 0.9rem;
     cursor: pointer;
 }
@@ -105,42 +106,50 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 700px;
-    border: 1px solid red;
 }
 
-
-.settings-your-account-item {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .settings-your-account-item p {
-    margin: 0;
-  }
-  
-  .account-settings-actions {
+.your-account-header{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-  }
+    gap: 0.9rem;
+}
+
+.settings-google-account-container{
+    display: flex;
+    gap: 7rem;
+    margin-top: 3rem;
+}
+
+.settings-google-account-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+ .settings-google-account-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
   
-  .account-settings-actions a {
-    color: #1a73e8;
+.settings-google-account-left p, .settings-google-account-right p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.settings-google-account-left p{
+    font-weight: 500;
+}
+
+.settings-google-account-right a{
     text-decoration: none;
-  }
-  
-  .account-settings-actions a:hover {
-    text-decoration: underline;
-  }
-  
+    color: var(--link-color);
+}
+
   .account-settings-small-txt {
     color: #555;
     margin: 0;
   }
   
-  .membership-status {
-    margin-right: 5px;
-    color: #000;
-    font-weight: bold;
-  }

@@ -46,33 +46,28 @@ const Settings = () => {
                 <p className='account-settings-small-txt'>This is your public presence on YouTube. You need a channel to upload your own videos, comment on videos, or create playlists.</p>
                 <div className='account-settings-create-channel'>
                     <p>Your channel</p>
-                    <button className='settings-create-channel-btn'>Create a channel</button>
+                    <Link className='settings-create-channel-btn'>Create a channel</Link>
                 </div>
             </div>
             <div className='account-settings-your-account'>
-                <h1>Your account</h1>
-                <p className='account-settings-small-txt'>You sign in to YouTube with your Google Account</p>
-                <div className='settings-your-account-item'>
-                    <p>Google Account</p>
-                    <div className='account-settings-actions'>
-                        <Link>View or change your Google Account settings</Link>
-                        <p>You will be redirected to your Google Account page</p>
-                    </div>
+                <div className='your-account-header'>
+                    <h1>Your account</h1>
+                    <p className='account-settings-small-txt'>You sign in to YouTube with your Google Account</p>
                 </div>
-                <div className='settings-your-account-item'>
-                    <p>Family Center</p>
-                    <div className='account-settings-actions'>
-                        <Link>Manage kids profiles and features for teens</Link>
-                        <p>Tools to connect parents, kids, and teens on YouTube</p>
+                <div className='settings-google-account-container'>
+                    <div className='settings-google-account-left'>
+                        <p>Google Account</p>
+                        <p>Family Center</p>
+                        <p>Membership</p>
                     </div>
-                </div>
-                <div className='settings-your-account-item'>
-                    <p>Membership</p>
-                    <div className='account-settings-actions'>
-                        <p><span className='membership-status'>No membership</span>
-                            <Link>Get YouTube Premium</Link>
-                        </p>
-                        <p>YouTube Premium offers uninterrupted music, ad-free videos, and more</p>
+
+                    <div className='settings-google-account-right'>
+                        <p><Link>View or change your Google Account settings</Link><br />
+                        You will be redirected to your Google Account page</p>
+                        <p><Link>Manage kids profiles and features for teens</Link><br />
+                        Tools to connect parents, kids, and teens on YouTube</p>
+                        <p><span>No membership</span> | <Link>Get YouTube Premium</Link><br />
+                        YouTube Premium offers uninterrupted music, ad-free videos, and more</p>
                     </div>
                 </div>
             </div>
