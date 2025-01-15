@@ -1,7 +1,6 @@
 import React from 'react'
 import './Settings.css'
 import { Link } from 'react-router-dom'
-import SettingsList from '../../components/SettingsList/SettingsList'
 
 const Settings = () => {
   return (

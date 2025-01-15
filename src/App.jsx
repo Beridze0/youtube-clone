@@ -6,7 +6,7 @@ import Sidebar from './components/Sidebar/Sidebar'
 import Category from './components/Category/Category'
 import VideoPage from './pages/VideoPage/VideoPage'
 import Settings from './pages/Settings/Settings'
-import SettingsNotifications from './components/SettingsNotifications/SettingsNotifications'
+import SettingsNotifications from './pages/SettingsNotifications/SettingsNotifications'
 import SettingsList from './components/SettingsList/SettingsList'
 
 const App = () => {
@@ -39,9 +39,8 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home isSidebarExpanded={isSidebarExpanded} />} />
             <Route path='/watch/1' element={<VideoPage />} />
-            <Route path='/account' element={<Settings />} >
-              <Route path='/account_notifications' element={<SettingsNotifications />} />
-            </Route>
+            <Route path='/account' element={<Settings />} />
+            <Route path='/account_notifications' element={<SettingsNotifications />} />
           </Routes>
         </div>
       </div>
