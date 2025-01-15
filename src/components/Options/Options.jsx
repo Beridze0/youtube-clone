@@ -16,6 +16,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdHelpOutline } from "react-icons/md";
 import { MdOutlineFeedback } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const Options = ({isOpen, setIsOpen, darkMode, handleDarkMode, toggleOptions}) => {
 
@@ -133,12 +134,12 @@ const Options = ({isOpen, setIsOpen, darkMode, handleDarkMode, toggleOptions}) =
                 </div>
             </div>
 
-            <div className='options-container'>
-                <div className='options-item'>
+            <Link to={'account'} className='options-container'>
+                <div className='options-item item-with-link'>
                     <IoSettingsOutline size={22} />
                     <p>Settings</p>
                 </div>
-            </div>
+            </Link>
 
             <div className='options-container options-container-last'>
                 <div className='options-item'>

@@ -73,4 +73,8 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
 }
 
+.horizontal{
+  display: flex;
+  gap: 6rem;
+}
 

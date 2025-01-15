@@ -78,7 +78,6 @@
     flex-direction: column;
     padding-block: 0.6rem;
     border-bottom: 1px solid var(--border-color-secondary);
-
 }
 
 .options-item{
@@ -88,6 +87,13 @@
     cursor: pointer;
     padding-left: 1.1rem;
     padding-right: 3rem;
+}
+
+
+.options-item a{
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 0.9rem;
 }
 
 .options-item:hover{

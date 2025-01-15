@@ -1,40 +1,11 @@
 import React from 'react'
 import './Settings.css'
 import { Link } from 'react-router-dom'
+import SettingsList from '../../components/SettingsList/SettingsList'
 
 const Settings = () => {
   return (
     <div className='settings'>
-        <div className='settings-list-container'>
-            <h1>Settings</h1>
-            <div className='settings-list'>
-                <div className='settings-list-option'>
-                    <p>Account</p>
-                </div>
-                <div className='settings-list-option'>
-                    <p>Notifications</p>
-                </div>
-                <div className='settings-list-option'>
-                    <p>Playback and performance</p>
-                </div>
-                <div className='settings-list-option'>
-                    <p>Downloads</p>
-                </div>
-                <div className='settings-list-option'>
-                    <p>Privacy</p>
-                </div>
-                <div className='settings-list-option'>
-                    <p>Connected apps</p>
-                </div>
-                <div className='settings-list-option'>
-                    <p>Billing and payments</p>
-                </div>
-                <div className='settings-list-option'>
-                    <p>Advnaced settings</p>
-                </div>
-            </div>
-        </div>
-
         <div className='account-settings'>
             <div className='account-settings-header'>
                 <h1>Account</h1>

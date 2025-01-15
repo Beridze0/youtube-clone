@@ -2,6 +2,7 @@
     display: flex;
     gap: 3rem;
     padding: 1rem;
+    width: 100%;
 }
 
 .settings h1{
@@ -10,37 +11,6 @@
 
 }
 
-.settings-list-container{
-    flex-basis: 18%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.settings-list-container h1{
-    margin-left: 1.2rem;
-    color: var(--text-secondary);
-}
-
-.settings-list-option{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 0.55rem;
-    padding: 0.65rem 0rem 0.65rem 1.1rem;
-    margin-left: 0.2rem;
-    cursor: pointer;
-}
-
-.settings-list-option:hover{
-    background-color: var(--button-bg);
-}
-
-.settings-list-option p{
-    margin: 0;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
 
 .account-settings{
     flex-basis: 70%;

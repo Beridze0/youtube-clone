@@ -1,0 +1,46 @@
+.settings-list-container{
+    flex-basis: 18%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.settings-list-container h1{
+    margin-left: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.settings-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.settings-list-option{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.55rem;
+    padding: 0.65rem 0rem 0.65rem 1.1rem;
+    margin-left: 0.2rem;
+    cursor: pointer;
+}
+
+.settings-list-option:hover{
+    background-color: var(--button-bg);
+}
+
+.settings-list-option p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+.settings-list a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
